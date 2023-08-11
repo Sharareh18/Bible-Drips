@@ -21,8 +21,9 @@ function fetchVerse(verseId) {
       .then(data => { 
         console.log('data: ', data);
         console.log('verse: ', data.data.content);
-        var verse = data.data[Math.floor(Math.random()*data.data.length)];
+        var verse = data.data.content
         console.log(verse);
+        document.querySelector("div").innerHTML = verse;
       })
       .catch(error => console.error('Error:', error));
 }
@@ -57,6 +58,8 @@ fetch(allChapters, {
   .then(data => { 
     console.log('data: ', data);
     console.log('verse: ', data.data.content);
+    data.data.shift()
+    console.log("shift",data.data)
     var chapter = data.data[Math.floor(Math.random()*data.data.length)];
     console.log(chapter);
     fetchVerses(chapter.id);
