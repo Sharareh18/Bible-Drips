@@ -1,33 +1,41 @@
-/* Reset some default browser styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0px;
+
+ h1 {
+    margin: 30px;
     padding: 0;
     background-color: rgb(91, 9, 243);
-    text-shadow: #333;
+    
 }
+
 
 /* Apply a basic font and background color */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    
 }
 
 .banner {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     text-align: center;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
 }
 
 .banner h1 {
     margin: 0;
-    padding: 10px;
+    padding: 30px;
+    
 }
-.image-box {
-min-width: 800px;
-height: 800px;
+.card {
+    margin-top: 114px;
+    background-color: #ffffff;
+    text-shadow: #ffffff;
+}
 
-}
 /* Style for the flex container */
 .flex {
     display: flex;
