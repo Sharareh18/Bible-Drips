@@ -2,40 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Bible Drip</title>
 </head>
-<header>
-  <h1>Bible Drip</h1>
-</header>
-<!-- maybe a page wide faded/opaque image as the hero section of page -->
-<hero></hero>
-
+    
 <body>
-  <main id="container">
+  <div class="flex demo">
+        <header class="banner"> 
+            <h1>Bible Drip</h1>
+        </header>
+   </div>
+   <article class="card">
+        <header>
+          <h3>Image with Bible script</h3>
+        </header>
+        <footer>
+          <button>Like</button>
+        </footer>
+      </article>
+  
+<button class="pseudo">Get Verse</button>
 
-    <div id="verseContainer">
-      <button id="verseButton">Get Verse</button>
-      <p id="insertVerseHere"></p>
-
-    </div>
-    <!-- realistically the same as the verse container as far as style is concerned -->
-    <div id="imageContainer">
-      <button id="imageButton">With Image</button>
-      <p id="insertImageHere"></p>
-    </div>
-
-    <!-- this is where the images/verses that are searched will be displayed as previously searched entities -->
-    <section id="viewedVerses"></section>
-    <section id="viewedImages"></section>
-
-
-  </main>
-
-
-  <body>
+<input class="pseudo" value="With image" type="submit">
 
     <script src="./assets/js/script.js"></script>
   </body>
