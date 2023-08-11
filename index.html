@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Bible Drip</title>
-    </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style1.css" />
+  <title>Test</title>
+</head>
+<header>
+  <h1>Bible Drip</h1>
+</header>
+<!-- maybe a page wide faded/opaque image as the hero section of page -->
+<hero></hero>
+
 <body>
-    
+  <main id="container">
+
+    <div id="verseContainer">
+      <button id="verseButton">Get Verse</button>
+      <p id="insertVerseHere"></p>
+
+    </div>
+    <!-- realistically the same as the verse container as far as style is concerned -->
+    <div id="imageContainer">
+      <button id="imageButton">Get Verse</button>
+      <p id="insertImageHere"></p>
+    </div>
+
+    <!-- this is where the images/verses that are searched will be displayed as previously searched entities -->
+    <section id="viewedVerses"></section>
+    <section id="viewedImages"></section>
+
+
+  </main>
+
+
+  <body>
+
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
+
 </html>
