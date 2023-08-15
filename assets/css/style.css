@@ -24,6 +24,7 @@ body {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .banner img {
@@ -60,9 +61,20 @@ body {
 }
 
 .card {
-    margin-top: 114px;
     background-color: #ffffff;
     text-shadow: none;
+    max-width: 1000px;
+    margin: auto;
+
+}
+#bgImage {
+    min-height: 500px;
+    background-size: cover;
+    font-size: xx-large;
+    text-shadow: 0 0 3px #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
 }
 
 /* Responsive styles */
@@ -100,5 +112,11 @@ body {
         margin: 5px 0;
         border: none;
         border-bottom: 1px solid #ccc;
+    }
+}
+/* style to remove banner images on extra small devices */
+@media (max-width: 680px) {
+    .banner img, .Banner-right img {
+      display: none; 
     }
 }

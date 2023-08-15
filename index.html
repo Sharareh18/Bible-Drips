@@ -2,41 +2,36 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Bible Drips</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Bible Drips</title>
 </head>
-    
+<!-- sections displaying header and random verse and image -->
 <body>
   <div class="flex demo">
-        <header class="banner"> 
-          <img src="./assets/images/Untitled design.png" alt="Banner image">
-          
-          <h1>Bible Drips</h1>
-        </div>
-        <div class="Banner-right">
-          <img src="./assets/images/Untitled design.png" alt="Banner image">
-        </div>
+    <header class="banner">
+      <img src="./assets/images/Untitled design.png" alt="Banner image">
 
-        </header>
-   </div>
-   <article class="card">
-        <header>
-          <h3 id="insertVerseHere"></h3>
-        </header>
-        <footer>
-          <button>Like</button>
-        </footer>
-      </article>
-  
-<button class="pseudo" id="verseButton">Get Verse</button>
+      <h1>Bible Drips</h1>
+  </div>
+  <div class="Banner-right">
+    <img src="./assets/images/Untitled design.png" alt="Banner image">
+  </div>
+  </header>
+  </div>
 
+  <main class="card">
+      <div id="bgImage">
+        <p id="mainVerse"></p>
+      </div>
+  </main>
+<!-- buttons for getting a random verse and verse with background image -->
+  <button class="pseudo" id="verseButton">Get Verse</button>
+  <input id="displayImage" class="pseudo" value="With image" type="submit">
 
-<input class="pseudo" value="With image" type="submit">
-
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <script src="./assets/js/script.js"></script>
+</body>
 
 </html>
