@@ -1,22 +1,22 @@
+// declaration of variables and API keys
 var allBooks = 'https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-02/books';
 var bibleId = '01b29f4b342acc35-01'; // 01b29f4b342acc35-01 // de4e12af7f28f599
 var pixaUrl = `https://pixabay.com/api/?key=${pixaKey}`;
 
-var versePlacement = document.getElementById("insertVerseHere");
-var imagePlacement = document.getElementById("insertImageHere");
 var verseButton = document.getElementById("verseButton");
-var imageButton = document.getElementById("imageButton");
+var imageButton = document.getElementById("displayImage");
 
-
-// var pixaKeyS = "38768763-bb697d80fc015bc0e4d2af0a5";
+// var pixaKeyEx = "38768763-bb697d80fc015bc0e4d2af0a5";  extra key 
+// var bibleKeyEx = "263f98bda97323ccd9096b75045b7876";  ectra key
 var pixaKey = "38708546-2cfb7c47338a280cf45ea2b47";
 var bibleKey = "e0069271426c93138b3100997ccfbd51";
 
-
+// function to save and display user's last verse upon refresh using localstorage. 
 function localVerseStorage() {
-  document.querySelector("#insertVerseHere").innerHTML = localStorage.getItem("StoredVerse");
+  document.querySelector("#mainVerse").innerHTML = localStorage.getItem("StoredVerse");
 };
 
+// function to go through all the different bible API categories and create the final verse.
 var displayVerse = function () {
   fetch(allBooks, {
     headers: {
@@ -42,7 +42,7 @@ function fetchVerse(verseId) {
     .then(data => {
       var verse = data.data.content;
       var reference = data.data.reference;
-      document.querySelector("#insertVerseHere").innerHTML = verse + reference;
+      document.querySelector("#mainVerse").innerHTML = verse + reference;
       localStorage.setItem("StoredVerse", verse + reference);
     })
     .catch(error => console.error('Error:', error));
@@ -82,7 +82,7 @@ function fetchBooks(chapterBookId) {
 
 
 
- 
+//  function to display random backgroun image for the verses using the pixabay API.  
 function displayImage() {
   fetch(`https://pixabay.com/api/?key=${pixaKey}&q=sky+clouds&image_type=photo&min_width=1200&category=backgrounds`)
     .then(function (response) {
@@ -94,28 +94,14 @@ function displayImage() {
       var largeImageURL = data.hits[hitsNumber].largeImageURL;
       localStorage.setItem("viewedImagesList", JSON.stringify(largeImageURL));
       var img = "<img src='" + largeImageURL + "'width=1200/>";
-      document.getElementById("insertImageHere").style.backgroundImage = "url("+ largeImageURL + ")"
+      document.getElementById("bgImage").style.backgroundImage = "url("+ largeImageURL + ")"
       // .catch(error => console.error('Error:', error));
 
     });
 
 };
 
-
-var showSearches = function () {
-
-  var viewedImagesList = JSON.parse(localStorage.getItem("viewedImagesList"));
-  console.log(viewedImagesList);
-  var viewed = document.getElementById("viewed");
-
-    viewed.setAttribute('src', viewedImagesList);
-
-};
-    
-  
-
-
-// // event listeners for user action on page 
+// event listeners for user action on page 
 localVerseStorage();
 verseButton.addEventListener("click", displayVerse);
 imageButton.addEventListener("click", displayImage);

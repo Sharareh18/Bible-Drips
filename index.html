@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Bible Drips</title>
 </head>
-
+<!-- sections displaying header and random verse and image -->
 <body>
   <div class="flex demo">
     <header class="banner">
@@ -19,22 +19,17 @@
   <div class="Banner-right">
     <img src="./assets/images/Untitled design.png" alt="Banner image">
   </div>
-
   </header>
   </div>
-  <article class="card">
-    <header>
-      <h3 id="insertVerseHere"></h3>
-    </header>
-    <footer>
-      <button>Like</button>
-    </footer>
-  </article>
 
+  <main class="card">
+      <div id="bgImage">
+        <p id="mainVerse"></p>
+      </div>
+  </main>
+<!-- buttons for getting a random verse and verse with background image -->
   <button class="pseudo" id="verseButton">Get Verse</button>
-
-
-  <input class="pseudo" value="With image" type="submit">
+  <input id="displayImage" class="pseudo" value="With image" type="submit">
 
   <script src="./assets/js/script.js"></script>
 </body>
