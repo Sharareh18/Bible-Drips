@@ -1,5 +1,5 @@
 var allBooks = 'https://api.scripture.api.bible/v1/bibles/de4e12af7f28f599-02/books';
-var bibleId = 'de4e12af7f28f599-02';
+var bibleId = '01b29f4b342acc35-01'; // 01b29f4b342acc35-01 // de4e12af7f28f599
 var pixaUrl = `https://pixabay.com/api/?key=${pixaKey}`;
 
 var versePlacement = document.getElementById("insertVerseHere");
@@ -13,12 +13,14 @@ var pixaKey = "38708546-2cfb7c47338a280cf45ea2b47";
 var bibleKey = "e0069271426c93138b3100997ccfbd51";
 
 
+function localVerseStorage() {
+  document.querySelector("#insertVerseHere").innerHTML = localStorage.getItem("StoredVerse");
+};
 
 var displayVerse = function () {
   fetch(allBooks, {
     headers: {
       'api-key': 'e0069271426c93138b3100997ccfbd51',
-      //   'mode': 'no-cors'
     }
   })
     .then(response => response.json())
@@ -34,14 +36,14 @@ function fetchVerse(verseId) {
   fetch(singleVerse, {
     headers: {
       'api-key': 'e0069271426c93138b3100997ccfbd51',
-      //   'mode': 'no-cors'
     }
   })
     .then(response => response.json())
     .then(data => {
       var verse = data.data.content;
       var reference = data.data.reference;
-      document.querySelector("#insertVerseHere").innerHTML = verse + reference; 
+      document.querySelector("#insertVerseHere").innerHTML = verse + reference;
+      localStorage.setItem("StoredVerse", verse + reference);
     })
     .catch(error => console.error('Error:', error));
 }
@@ -51,7 +53,6 @@ function fetchVerses(chapterId) {
   fetch(allVerses, {
     headers: {
       'api-key': 'e0069271426c93138b3100997ccfbd51',
-      //   'mode': 'no-cors'
     }
   })
     .then(response => response.json())
@@ -67,7 +68,6 @@ function fetchBooks(chapterBookId) {
   fetch(allChapters, {
     headers: {
       'api-key': 'e0069271426c93138b3100997ccfbd51',
-      //   'mode': 'no-cors'
     }
   })
     .then(response => response.json())
@@ -116,5 +116,6 @@ var showSearches = function () {
 
 
 // // event listeners for user action on page 
+localVerseStorage();
 verseButton.addEventListener("click", displayVerse);
 imageButton.addEventListener("click", displayImage);

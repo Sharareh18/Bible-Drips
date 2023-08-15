@@ -2,34 +2,41 @@
 <html lang="en">
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./style1.css" />
-  <title>Test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Bible Drips</title>
 </head>
-<header>
-  <h1>Bible Drip</h1>
-</header>
-<!-- maybe a page wide faded/opaque image as the hero section of page -->
-<hero></hero>
 
 <body>
-  <main id="container">
+  <div class="flex demo">
+    <header class="banner">
+      <img src="./assets/images/Untitled design.png" alt="Banner image">
 
-    <div id="verseContainer">
-      <button id="verseButton">Get Verse</button>
-      <p id="insertVerseHere"></p>
+      <h1>Bible Drips</h1>
+  </div>
+  <div class="Banner-right">
+    <img src="./assets/images/Untitled design.png" alt="Banner image">
+  </div>
 
-    </div>
-    <!-- realistically the same as the verse container as far as style is concerned -->
-    <div id="imageContainer">
-      <button id="imageButton">Get Verse</button>
-      <p id="insertImageHere"></p>
-    </div>
+  </header>
+  </div>
+  <article class="card">
+    <header>
+      <h3 id="insertVerseHere"></h3>
+    </header>
+    <footer>
+      <button>Like</button>
+    </footer>
+  </article>
 
-    <!-- this is where the images/verses that are searched will be displayed as previously searched entities -->
-    <section id="viewedVerses"></section>
-    <section id="viewedImages"></section>
+  <button class="pseudo" id="verseButton">Get Verse</button>
 
 
-  </main>
+  <input class="pseudo" value="With image" type="submit">
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

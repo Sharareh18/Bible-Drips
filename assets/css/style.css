@@ -1,62 +1,52 @@
 
 h1 {
-    margin: 30px;
-    padding: 0;
-    background-color: rgb(91, 9, 243);
-    
+    margin: 0;
+    padding: 10px;
+    background-color: #880BDF;
+    font-family: "Arial", sans-serif; 
+    font-size: 40px; 
+    color: #fff; 
+    text-transform: uppercase; 
+    letter-spacing: 10px; 
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); 
 }
 
-
-/* Apply a basic font and background color */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    
+    text-align: center;
+    margin: 0;
 }
 
+/* Style for the banner */
 .banner {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: fixed;
-    top:0;
-    left:0;
-    width: 100%;
+}
+
+.banner img {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 130px;
+    height: 113px;
+}
+
+.Banner-right img {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    width: 130px;
+    height: 113px;
 }
 
 .banner h1 {
     margin: 0;
     padding: 30px;
-    
+    height: 115px;
 }
-.card {
-    margin-top: 114px;
-    background-color: #ffffff;
-    text-shadow: #ffffff;
-}
-#insertImageHere {
-    min-height: 400px;
-    background-size: cover;
-}
-
-/* Style for the flex container */
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Style for the demo divs within the flex container */
-.flex div {
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-/* Style for the pseudo classes */
 .pseudo {
     display: inline-block;
     padding: 10px 20px;
@@ -69,27 +59,50 @@ body {
     border-radius: 50px;
 }
 
-/* Additional style for the checkbox and its associated label */
-input[type="checkbox"] {
-    display: none;
+.card {
+    margin-top: 114px;
+    background-color: #ffffff;
+    text-shadow: none;
 }
-
-/* Style for the toggle label */
-.toggle {
-    border: none;
-    background-color: #999;
-    color: #fff;
-}
-
-/* Style for the link button */
-a.button {
-    text-decoration: none;
+#insertImageHere {
+    min-height: 400px;
+    background-size: cover;
 }
 
 /* Responsive styles */
 @media screen and (max-width: 600px) {
+    .banner {
+        padding: 10px 0;
+    }
+
+    .banner img,
+    .Banner-right img {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .banner h1 {
+        padding: 10px;
+        height: auto;
+        font-size: 24px;
+    }
+
+    .card {
+        margin-top: 10px;
+    }
+
     .flex {
         flex-direction: column;
-        margin-top: 200px; /* Adjust the value as needed */
+        padding: 10px;
+    }
+
+    .flex div {
+        padding: 5px;
+        margin: 5px 0;
+        border: none;
+        border-bottom: 1px solid #ccc;
     }
 }
