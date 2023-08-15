@@ -87,7 +87,7 @@ var bibleKey = "e0069271426c93138b3100997ccfbd51";
 
  
 function displayImage() {
-  fetch(`https://pixabay.com/api/?key=${pixaKey}&q=sky+clouds&image_type=photo&min_width=600&category=backgrounds`)
+  fetch(`https://pixabay.com/api/?key=${pixaKey}&q=sky+clouds&image_type=photo&min_width=1200&category=backgrounds`)
     .then(function (response) {
       return response.json();
     })
@@ -96,7 +96,7 @@ function displayImage() {
       var hitsNumber = Math.round(Math.random() * (20 - 1) +1);
       var largeImageURL = data.hits[hitsNumber].largeImageURL;
       localStorage.setItem("viewedImagesList", JSON.stringify(largeImageURL));
-      var img = "<img src='" + largeImageURL + "'width=400/>";
+      var img = "<img src='" + largeImageURL + "'width=1200/>";
       document.getElementById("insertImageHere").innerHTML = img;
       // .catch(error => console.error('Error:', error));
 
@@ -105,7 +105,7 @@ function displayImage() {
 };
 
 
-// var showSearches = function () {
+var showSearches = function () {
 //   var viewedVersesList = JSON.parse(localStorage.getItem("viewedVersesList"));
 //   if (viewedVersesList) {
 //     viewedVerses = viewedVersesList;
@@ -115,15 +115,21 @@ function displayImage() {
 
 //     }
 //   }
-  // var viewedImagesList = JSON.parse(localStorage.getItem("viewedImagesList"));
-  // if (viewedImagesList) {
-  //   viewedImages = viewedImagesList;
-  //   for (i = 0; i < viewedImagesList.length; i++) {
-  //     var viewedImages = document.getElementById("viewedImagesList");
-  //     viewedImages.innerHTML = "<li>" + viewedImages + "</li>";
 
-  //   }
-  // };
+  var viewedImagesList = JSON.parse(localStorage.getItem("viewedImagesList"));
+  if (viewedImagesList) {
+    previewImage.setAttribute('src', viewedImagesList);
+  } else {
+    previewImage.setAttribute('src', 'default.jpg');
+}
+    // viewedImages = viewedImagesList;
+    // for (i = 0; i < viewedImagesList.length; i++) {
+    //   var viewedImages = document.getElementById("viewedImagesList");
+    //   viewedImages.innerHTML = "<li>" + viewedImages + "</li>";
+
+    // }
+  };
+
 
 // // event listeners for user action on page 
 // verseButton.addEventListener("click", displayVerse);
