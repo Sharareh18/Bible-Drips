@@ -5,6 +5,7 @@ var pixaUrl = `https://pixabay.com/api/?key=${pixaKey}`;
 
 var verseButton = document.getElementById("verseButton");
 var imageButton = document.getElementById("displayImage");
+var viButton = document.getElementById("viButton");
 
 // var pixaKeyEx = "38768763-bb697d80fc015bc0e4d2af0a5";  extra key 
 // var bibleKeyEx = "263f98bda97323ccd9096b75045b7876";  ectra key
@@ -101,7 +102,12 @@ function displayImage() {
 
 };
 
+function viButtonCall () {
+  displayVerse();
+  displayImage();
+}
 // event listeners for user action on page 
 localVerseStorage();
 verseButton.addEventListener("click", displayVerse);
+viButton.addEventListener("click", viButtonCall);
 imageButton.addEventListener("click", displayImage);
