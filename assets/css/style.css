@@ -2,7 +2,7 @@
 h1 {
     margin: 0;
     padding: 10px;
-    background-color: #880BDF;
+    background-color: #0074d9;
     font-family: "Arial", sans-serif; 
     font-size: 40px; 
     color: #fff; 
@@ -16,6 +16,11 @@ body {
     background-color: #f0f0f0;
     text-align: center;
     margin: 0;
+}
+
+main {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* Style for the banner */
@@ -48,15 +53,10 @@ body {
     padding: 30px;
     height: 115px;
 }
-.pseudo {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 50px;
-    border: 1px solid #333;
-    background-color: #666;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
+
+button {
+    margin: 5px;
+    font-size: 1.5rem;
     border-radius: 50px;
 }
 
@@ -65,7 +65,7 @@ body {
     text-shadow: none;
     max-width: 1000px;
     margin: auto;
-
+    margin-bottom: 1.5rem;
 }
 #bgImage {
     min-height: 500px;
@@ -78,9 +78,15 @@ body {
 }
 
 /* Responsive styles */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .banner {
         padding: 10px 0;
+    }
+
+    button {
+        margin: 5px;
+        font-size: 1.25rem;
+        border-radius: 50px;
     }
 
     .banner img,
@@ -98,10 +104,6 @@ body {
         font-size: 24px;
     }
 
-    .card {
-        margin-top: 10px;
-    }
-
     .flex {
         flex-direction: column;
         padding: 10px;
@@ -113,10 +115,14 @@ body {
         border: none;
         border-bottom: 1px solid #ccc;
     }
-}
-/* style to remove banner images on extra small devices */
-@media (max-width: 680px) {
     .banner img, .Banner-right img {
-      display: none; 
+        display: none; 
+      }
+}
+
+@media screen and (max-width: 470px) {
+    #flexBtn {
+    display: flex;
+    flex-direction: column;
     }
 }
