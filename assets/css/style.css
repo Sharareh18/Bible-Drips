@@ -75,10 +75,11 @@ button {
     min-height: 500px;
     background-size: cover;
     font-size: xx-large;
-    text-shadow: 0 0 3px #ffffff;
+    text-shadow: 1px 1px 1.5px #ffffff;
     display: flex;
     align-items: center;
     padding: 1rem;
+    background-position: bottom center;
 }
 
 /* footer section styling */
@@ -150,4 +151,5 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    
 }
