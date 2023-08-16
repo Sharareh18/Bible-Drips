@@ -75,10 +75,11 @@ button {
     min-height: 500px;
     background-size: cover;
     font-size: xx-large;
-    text-shadow: 0 0 3px #ffffff;
+    text-shadow: 1px 1px 1.5px #ffffff;
     display: flex;
     align-items: center;
     padding: 1rem;
+    background-position: bottom center;
 }
 
 /* footer section styling */
@@ -149,5 +150,17 @@ footer {
     #flexBtn {
         display: flex;
         flex-direction: column;
+    }
+    .banner {
+        margin-bottom: 13px;
+    }
+    .card {
+        margin-bottom: 12px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .banner h1 {
+        font-size: 26px;
     }
 }
