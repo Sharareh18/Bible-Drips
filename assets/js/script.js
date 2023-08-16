@@ -47,8 +47,8 @@ function fetchVerse(verseId) {
     .then((data) => {
       var verse = data.data.content;
       var reference = data.data.reference;
-      document.querySelector("#mainVerse").innerHTML = verse + reference;
-      localStorage.setItem("StoredVerse", verse + reference);
+      document.querySelector("#mainVerse").innerHTML = verse + "<br>" + reference;
+      localStorage.setItem("StoredVerse", verse + "<br>" + reference);
       verseButton.textContent = "Get Verse";
       viButton.textContent = "Verse + Image";
       imageButton.textContent = "Get Image";
