@@ -2,7 +2,7 @@ h1 {
     margin: 0;
     padding: 10px;
     background-color: #0074d9;
-    font-family: "Arial", sans-serif;
+    font-family: 'Yeseva One', sans-serif;
     font-size: 40px;
     color: #fff;
     text-transform: uppercase;
@@ -57,6 +57,8 @@ button {
     margin: 5px;
     font-size: 1.5rem;
     border-radius: 50px;
+    box-shadow: 5px 5px 5px grey;
+    font-family: 'Yeseva One', sans-serif;
 }
 
 .card {
@@ -65,6 +67,8 @@ button {
     max-width: 1000px;
     margin: auto;
     margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 5px grey;
+    font-family: 'Cinzel', serif;
 }
 
 #bgImage {
@@ -83,16 +87,15 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: small;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .fa {
-    padding: 30px;
     font-size: 40px;
     width: 40px;
     text-align: center;
     text-decoration: none;
-    margin: 5px 5px;
+    margin: 5px 17px;
     border-radius: 50%;
     color: #0074d9;
 }
