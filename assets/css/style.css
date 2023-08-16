@@ -151,5 +151,10 @@ footer {
         display: flex;
         flex-direction: column;
     }
-    
+    .banner {
+        margin-bottom: 13px;
+    }
+    .card {
+        margin-bottom: 12px;
+    }
 }
