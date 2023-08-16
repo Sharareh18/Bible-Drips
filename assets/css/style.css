@@ -1,14 +1,13 @@
-
 h1 {
     margin: 0;
     padding: 10px;
     background-color: #0074d9;
-    font-family: "Arial", sans-serif; 
-    font-size: 40px; 
-    color: #fff; 
-    text-transform: uppercase; 
-    letter-spacing: 10px; 
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3); 
+    font-family: "Arial", sans-serif;
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -67,6 +66,7 @@ button {
     margin: auto;
     margin-bottom: 1.5rem;
 }
+
 #bgImage {
     min-height: 500px;
     background-size: cover;
@@ -75,6 +75,26 @@ button {
     display: flex;
     align-items: center;
     padding: 1rem;
+}
+
+/* footer section styling */
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 10px;
+    font-size: small;
+    margin-top: 100px;
+}
+
+.fa {
+    padding: 30px;
+    font-size: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+    color: #0074d9;
 }
 
 /* Responsive styles */
@@ -115,14 +135,16 @@ button {
         border: none;
         border-bottom: 1px solid #ccc;
     }
-    .banner img, .Banner-right img {
-        display: none; 
-      }
+
+    .banner img,
+    .Banner-right img {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 470px) {
     #flexBtn {
-    display: flex;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
     }
 }

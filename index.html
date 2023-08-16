@@ -5,10 +5,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
   <title>Bible Drips</title>
 </head>
 <!-- sections displaying header and random verse and image -->
+
 <body>
   <div>
     <header class="banner">
@@ -21,21 +23,31 @@
   </div>
   </header>
   </div>
-<main>
-  <div class="card">
+  <main>
+    <div class="card">
       <div id="bgImage">
         <p id="mainVerse"></p>
       </div>
+    </div>
+  </main>
+
+  <section id="flexBtn">
+    <!-- buttons for getting a random verse and verse with background image -->
+    <button id="verseButton">Get Verse</button>
+    <button id="viButton">Verse + Image</button>
+    <button id="displayImage">Get Image</button>
+  </section>
+
+  <footer>
+    <div class="shareIt">
+    <a href="https://www.facebook.com/sharer/sharer.php?u=https://sharareh18.github.io/Bible-Drips/" class="fa fa-facebook"></a>
+    <a href="https://twitter.com/sharer/sharer.php?u=https://sharareh18.github.io/Bible-Drips/" class="fa fa-twitter"></a>
+    <a href="https://pinterest.com/sharer/sharer.php?u=https://sharareh18.github.io/Bible-Drips/" class="fa fa-pinterest"></a>
+    
   </div>
-</main>
+    <p>©2023 group4 Inc, all rights reserved</p>
 
-<section id="flexBtn">
-<!-- buttons for getting a random verse and verse with background image -->
-  <button id="verseButton">Get Verse</button>
-  <button id="viButton">Verse + Image</button>
-  <button id="displayImage">Get Image</button>
-</section>
-
+  </footer>
   <script src="./assets/js/script.js"></script>
 </body>
 
