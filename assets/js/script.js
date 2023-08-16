@@ -125,8 +125,7 @@ function displayVerseImage() {
 }
 
 // event listeners for user action on page
-// Father God, I pray over the person clicking for a verse.
-// I pray for the wisdom of your word to bring life to them.
+// Father God, I pray over the person clicking for a verse. I pray for the wisdom of your word to bring life to them. In Jesus name, Amen.
 localVerseStorage();
 verseButton.addEventListener("click", displayVerse);
 viButton.addEventListener("click", displayVerseImage);
