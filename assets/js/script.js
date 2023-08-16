@@ -15,8 +15,12 @@ var bibleKey = "e0069271426c93138b3100997ccfbd51";
 
 // function to save and display user's last verse upon refresh using localstorage.
 function localVerseStorage() {
-  document.querySelector("#mainVerse").innerHTML =
-    localStorage.getItem("StoredVerse");
+  var storedVerse = localStorage.getItem("StoredVerse");
+  if (storedVerse) {
+    document.querySelector("#mainVerse").innerHTML = storedVerse;
+  } else {
+    document.querySelector("#mainVerse").innerHTML = "31,102 Verse..." + "<br>" + "Click verse button to get random verse." + "<br>" + "Start your Journey!";
+  }
 }
 
 // function to go through all the different bible API categories and create the final verse.
