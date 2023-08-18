@@ -15,8 +15,12 @@ var bibleKey = "e0069271426c93138b3100997ccfbd51";
 
 // function to save and display user's last verse upon refresh using localstorage.
 function localVerseStorage() {
-  document.querySelector("#mainVerse").innerHTML =
-    localStorage.getItem("StoredVerse");
+  var storedVerse = localStorage.getItem("StoredVerse");
+  if (storedVerse) {
+    document.querySelector("#mainVerse").innerHTML = storedVerse;
+  } else {
+    document.querySelector("#mainVerse").innerHTML = "31,102 Verse..." + "<br>" + "Click verse button to get random verse." + "<br>" + "Start your Journey!";
+  }
 }
 
 // function to go through all the different bible API categories and create the final verse.
@@ -47,8 +51,8 @@ function fetchVerse(verseId) {
     .then((data) => {
       var verse = data.data.content;
       var reference = data.data.reference;
-      document.querySelector("#mainVerse").innerHTML = verse + reference;
-      localStorage.setItem("StoredVerse", verse + reference);
+      document.querySelector("#mainVerse").innerHTML = verse + "<br>" + reference;
+      localStorage.setItem("StoredVerse", verse + "<br>" + reference);
       verseButton.textContent = "Get Verse";
       viButton.textContent = "Verse + Image";
       imageButton.textContent = "Get Image";
@@ -125,8 +129,7 @@ function displayVerseImage() {
 }
 
 // event listeners for user action on page
-// Father God, I pray over the person clicking for a verse.
-// I pray for the wisdom of your word to bring life to them.
+// Father God, I pray over the person clicking for a verse. I pray for the wisdom of your word to bring life to them. In Jesus name, Amen.
 localVerseStorage();
 verseButton.addEventListener("click", displayVerse);
 viButton.addEventListener("click", displayVerseImage);
